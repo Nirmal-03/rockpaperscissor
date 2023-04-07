@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+.container{
+    background-color: #fff;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.container .head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .topic{
+    font-family:'Edu NSW ACT Foundation', cursive;
+    font-size: 48px;
+    position: relative;
+    display: inline-block;
+}
+.container .topic::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #30fe30;
+    bottom: 0;
+}
+.container .result{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .result h1{
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Sacramento', cursive;
+    font-size: 42px;
+    font-weight: bolder;
+    display: inline-block;
+    position: relative;
+}
+.container .result h1::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: red;
+    bottom: 0;
+}
+.players{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    padding:30px 0;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.players .player h1{
+    text-align: center;
+    color: #00296b;
+}
+.players .player .con{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.con .gamepic{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+.add{
+    transform: rotate(0);
+    animation: animate 2s infinite;
+}
+@keyframes animate {
+    10%{
+        transform: rotate(60deg);
+    }
+    20%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(60deg);
+    }
+    40%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(60deg);
+    }
+    60%{
+        transform: rotate(0);
+    }
+    70%{
+        transform: rotate(60deg);
+    }
+    80%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(0);
+    }
+    
+}
+
+.control{
+    background: aliceblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.control .btn{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    margin: auto 100px;
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+.control .btn img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+footer h3{
+    font-family: 'Sacramento', cursive;
+    color: #fff;
+    font-size: 42px;
+}
+footer h3 span{
+    color: red;
+}
+@media (max-width:992px){
+    .control .btn{
+        width: 50px;
+        height: 50px;
+        margin: auto 50px;
+        border-radius: 10px;
+        border: 3px solid black;
+    }
+}
+@media (max-width:768px){
+    .players .player .con{
+        width: 200px;
+        height: 200px;
+    }
+    .players{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:600px){
+    .head .topic{
+        padding: 20px;
+    }
+    .head .topic{
+        font-size: 20px;
+    }
+    .container .result h1{
+        font-size: 20px;
+    }
+    .players .player .con{
+        width: 150px;
+        height: 150px;
+    }
+    .players{
+        margin-bottom: 10px;
+    }
+    .control .btn{
+        width: 75px;
+        height: 75px;
+        margin: auto;
+    }
+    .players{
+        flex-direction: column;
+    }
+    .players .player .con{
+        margin: auto;
+    }
+}
+@media (max-width:473px){
+    footer h3{
+        font-size: 25px;
+    }
+    .control .btn{
+        width: 50px;
+        height: 50px;
+    }
+    .container .topic::before{
+        width: 80%;
+    }
+    .players{
+        margin: 0;
+        padding: 0;
+    }
+    .players .player h1{
+        font-size: 20px;
+    }
+    .container .result h1{
+        padding: 10px;
+    }
+    .container .result h1::before{
+        width: 80%;
+    }
+}
